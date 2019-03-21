@@ -1,0 +1,23 @@
+<h3>Blogger</h3>
+<div>
+<%= form_for @blogger do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+</div>
+<p></p>
+<%= f.label :bio %>
+<div>
+<%= f.text_area :bio %>
+</div>
+<div><p></p>
+<%= f.label :age %>
+<%= f.number_field :age %>
+</div>
+<div><p></p>
+<%= f.submit %>
+<% end %>
+</div>
+<p></p>
+<div class="">
+  <%= link_to "Back to All Bloggers", bloggers_path %>
+</div>

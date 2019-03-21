@@ -1,0 +1,27 @@
+<h3>Post</h3>
+<div>
+<%= form_for @post do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<div>
+  <%= f.label :content %>
+  <div>
+    </div>
+    <%= f.text_area :content, required: true %>
+    </div>
+    <div>
+    <%= f.label :blogger_id %>
+    <%= f.collection_select :blogger_id, Blogger.all, :id, :name %>
+    </div>
+    <div>
+    <%= f.label :destination_id %>
+    <%= f.collection_select :destination_id, Destination.all, :id, :name %>
+</div>
+<div>
+<%= f.submit %>
+<% end %>
+</div>
+
+<div>
+  <%= link_to "Back to All Bloggers", bloggers_path %>
+</div>

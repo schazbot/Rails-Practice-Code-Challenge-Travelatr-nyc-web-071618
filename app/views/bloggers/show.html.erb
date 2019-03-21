@@ -1,0 +1,15 @@
+<h1><%= @blogger.name %></h1>
+
+<p><%= @blogger.bio %> </p>
+<p><%= @blogger.age %> </p>
+
+<% @blogger.posts.each do |post| %>
+<li>
+<%= link_to post.title, post %>
+</li>
+<% end %>
+
+
+<h4> <%=link_to "Back to all Bloggers", bloggers_path %></h4>
+<h4> <%=link_to "Back to all posts", posts_path %></h4>
+<h4> <%=link_to "Back to all destinations", destinations_path %></h4>
